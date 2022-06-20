@@ -10,6 +10,8 @@ function Calculator() {
   const [billPreventNegative, setBillPreventNegative] = useState(false);
   const [peoplePreventNegative, setPeoplePreventNegative] = useState(false);
 
+  const tipPercent = [5, 10, 15, 25, 50];
+
   const billPerPerson = bill / people;
   const tipAmount = bill * (tip / 100);
   const tipPerPerson = tipAmount / people;
@@ -84,36 +86,16 @@ function Calculator() {
             Select Tip %
           </span>
           <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-3">
-            <button
-              onClick={() => setTip(5)}
-              className={tip === 5 ? 'active tip-btn' : 'tip-btn'}
-            >
-              5%
-            </button>
-            <button
-              onClick={() => setTip(10)}
-              className={tip === 10 ? 'active tip-btn' : 'tip-btn'}
-            >
-              10%
-            </button>
-            <button
-              onClick={() => setTip(15)}
-              className={tip === 15 ? 'active tip-btn' : 'tip-btn'}
-            >
-              15%
-            </button>
-            <button
-              onClick={() => setTip(25)}
-              className={tip === 25 ? 'active tip-btn' : 'tip-btn'}
-            >
-              25%
-            </button>
-            <button
-              onClick={() => setTip(50)}
-              className={tip === 50 ? 'active tip-btn' : 'tip-btn'}
-            >
-              50%
-            </button>
+            {tipPercent.map((percent) => {
+              return (
+                <button
+                  onClick={() => setTip(percent)}
+                  className={tip === percent ? 'active tip-btn' : 'tip-btn'}
+                >
+                  {percent}%
+                </button>
+              );
+            })}
             <input
               className="rounded-md bg-veryLightGrayishCyan px-4 text-right text-2xl outline-darkGrayishCyan placeholder:text-center placeholder:text-darkGrayishCyan"
               type="number"
