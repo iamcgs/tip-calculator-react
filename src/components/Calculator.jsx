@@ -6,6 +6,7 @@ function Calculator() {
   const [bill, setBill] = useState('');
   const [people, setPeople] = useState('');
   const [tip, setTip] = useState('');
+  const [customTip, setCustomTip] = useState('');
   const [billPreventNegative, setBillPreventNegative] = useState(false);
   const [peoplePreventNegative, setPeoplePreventNegative] = useState(false);
 
@@ -40,6 +41,7 @@ function Calculator() {
     setBill('');
     setPeople('');
     setTip('');
+    setCustomTip('');
   };
 
   return (
@@ -116,7 +118,8 @@ function Calculator() {
               className="rounded-md bg-veryLightGrayishCyan px-4 text-right text-2xl outline-darkGrayishCyan placeholder:text-center placeholder:text-darkGrayishCyan"
               type="number"
               placeholder="Custom"
-              onChange={(e) => setTip(e.target.value)}
+              value={customTip}
+              onChange={(e) => setCustomTip(e.target.value)}
             />
           </div>
         </div>
