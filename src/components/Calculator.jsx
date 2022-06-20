@@ -3,10 +3,6 @@ import Dollar from '../images/icon-dollar.svg';
 import Person from '../images/icon-person.svg';
 
 function Calculator() {
-  // ---------------------------------
-  // PREVENT ENTERING NEGATIVE NUMBERS
-  // ---------------------------------
-
   const [bill, setBill] = useState('');
   const [people, setPeople] = useState('');
   const [tip, setTip] = useState('');
