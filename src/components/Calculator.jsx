@@ -190,7 +190,7 @@ function Calculator() {
         </div>
 
         <button
-          disabled={!bill && !people && !tip ? true : false}
+          disabled={!bill && !people && !tip && !customTip ? true : false}
           onClick={handleReset}
           className="w-full rounded-lg bg-strongCyan px-8 py-4 text-2xl font-bold uppercase tracking-wide text-veryDarkCyan transition-all duration-300 ease-in-out hover:bg-lightGrayishCyan lg:py-2"
         >
