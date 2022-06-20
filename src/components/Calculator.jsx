@@ -161,7 +161,7 @@ function Calculator() {
               <span className="text-grayishCyan">/ person</span>
             </div>
             <div>
-              <span className="text-5xl text-strongCyan">
+              <span className="text-4xl text-strongCyan">
                 $
                 {isNaN(tipPerPerson) || tipPerPerson === Infinity
                   ? '0.00'
@@ -176,7 +176,7 @@ function Calculator() {
               <span className="text-grayishCyan">/ person</span>
             </div>
             <div>
-              <span className="text-5xl text-strongCyan">
+              <span className="text-4xl text-strongCyan">
                 $
                 {isNaN(totalPerPerson) || totalPerPerson === Infinity
                   ? '0.00'
