@@ -89,6 +89,7 @@ function Calculator() {
             {tipPercent.map((percent) => {
               return (
                 <button
+                  key={percent}
                   onClick={() => setTip(percent)}
                   className={tip === percent ? 'active tip-btn' : 'tip-btn'}
                 >
